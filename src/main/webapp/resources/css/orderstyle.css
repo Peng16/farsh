@@ -1,0 +1,301 @@
+body {
+	font: 12px/ 1.5 Arial, Tahoma, Helvetica, sans-serif;
+	background: #F9F9F9 none repeat scroll 0% 0%;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+	{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+}
+
+a {
+	color:#00c3f5;
+	text-decoration: none;
+}
+
+/*中间部分*/
+#bd {
+	margin: 60px auto;
+	width: 980px;
+	min-height: 360px;
+}
+
+.pg-pay {
+	padding: 30px;
+	line-height: 28px;
+	font-size: 14px;
+}
+
+#bd .body {
+	border: 1px solid #DDD;
+	background: #FFF none repeat scroll 0% 0%;
+}
+
+.pg-pay .desc {
+	color: #333;
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+.pg-pay .desc i {
+	font-style: normal;
+	color: #F36F71;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.pg-pay .details {
+	margin-top: 20px;
+	border: 1px solid #EAEAEA;
+	width: 898px;
+	font-size: 12px;
+	font-family: simsun;
+}
+
+.pg-pay .details th,.pg-pay .details td {
+	text-align: center;
+}
+
+.pg-pay .details th {
+	background: #F7F7F7 none repeat scroll 0% 0%;
+	color: #999;
+	height: 40px;
+}
+
+.pg-pay .details td {
+	height: 60px;
+	line-height: 12px;
+	padding: 0px 20px;
+	border: 1px solid #EAEAEA;
+}
+
+.pg-pay .pay-handle {
+	text-align: right;
+}
+
+.pg-pay .pay-handle .pay-amount em {
+	color: #F50;
+	font-size: 22px;
+	font-family: Arial;
+}
+
+.pg-pay .pay-handle .btn {
+	margin: 6px 0px;
+}
+
+.btn-hot {
+	display: inline-block;
+	padding: 6px 20px;
+	font-size: 14px;
+	line-height: 1.5;
+	font-family: "Microsoft Yahei", Arial;
+	letter-spacing: 0.1em;
+	text-align: center;
+	text-decoration: none;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+	-moz-user-select: none;
+	cursor: pointer;
+	color: #FFF;
+	border-color: #F08100;
+	background-color: #FF900E;
+	background-image: linear-gradient(to right, #FF8900 0px, #FF900E 100%);
+	background-repeat: repeat-x;
+	box-shadow: 0px 1px 0px #FEA418 inset;
+}
+
+.pg-pay .details td strong {
+	font-weight: bolder;
+	font-family: Arial;
+	font-size: 11px;
+	display: block;
+	float: right;
+	width: 124px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.pg-pay .total {
+	font-size: 14px;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 1px dotted #EAEAEA;
+	margin-bottom: 20px;
+}
+
+.pg-pay .total strong {
+	color: #F80;
+}
+
+.remind-pay {
+	font-size: 14px;
+	color: #999;
+	position: relative;
+}
+
+.remind-pay i {
+	background: transparent url(../img/attention.png) no-repeat scroll 0% 0%/
+		100% auto;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+	left: -2px;
+}
+
+.remind-pay strong {
+	color: #F36F71;
+}
+
+.site-info-w {
+	border-top: 3px solid #2BB8AA;
+	margin-top: 40px;
+	padding-bottom: 30px;
+	background: #F9F9F9 none repeat scroll 0% 0%;
+	clear: both;
+	min-height: 298px;
+}
+
+/*******/
+.pay-list {
+	line-height: 28px;
+	font-size: 14px;
+	height: 110px;
+	width: 610px;
+	margin: 0px 0px 12px;
+}
+
+.pay-list li {
+	float: left;
+	margin: 0px 30px 15px 0px;
+}
+
+li {
+	list-style: outside none none;
+}
+
+.pay-list label {
+	display: inline-block;
+	margin-left: 5px;
+	width: 147px;
+	height: 34px;
+	overflow: hidden;
+	text-align:center;
+	vertical-align: middle;
+	border: 1px solid #DDD;
+}
+
+h2.order_title {
+	position: relative;
+	font-size: 18px;
+	color: #000;
+	padding: 10px 0 15px 12px;
+	border-bottom: #dfdfdf 1px solid;
+	font-weight: 400;
+}
+
+/*..地址样式...*/
+.consigneeinfo {
+	padding-left: 12px;
+}
+
+.user_msg {
+	width: 100%;
+	padding: 30px 12px 60px;
+}
+
+.address_list {
+	overflow: hidden;
+	margin-left: -14px;
+}
+
+.address_list .address_box {
+	position: relative;
+	float: left;
+	width: 248px;
+	height: 102px;
+	border: 1px solid #e3e4e4;
+	margin: 2px 2px 30px 14px;
+	cursor: pointer;
+	padding: 20px 22px;
+}
+
+.address_list .address_box:hover,.address_list .address_box.active {
+	border: 3px solid #00c3f5;
+	margin: 0 0 28px 12px;
+}
+
+.address_list .address_box.active {
+	cursor: auto;
+}
+
+.address_list .address_box .top {
+	font-weight: 700;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f0f0f0;
+	margin-bottom: 10px;
+}
+
+.address_list .address_box.active::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	content: " ";
+	display: block;
+	width: 29px;
+	height: 28px;
+	background: url(../images/order_icons.png) no-repeat;
+	background-position: -49px -2px;
+}
+
+.user_address .add_address {
+	color: #00c3f5;
+	cursor: pointer;
+}
+
+.user_address .add_address .add_icon {
+	display: inline-block;
+	vertical-align: middle;
+	border: 2px solid #00c3f5;
+	width: 12px;
+	height: 12px;
+	font-size: 16px;
+	font-weight: bolder;
+	border-radius: 2px;
+	line-height: 10px;
+	text-align: center;
+	margin-right: 5px;
+}
+
+/*......*/
+a.cartgo {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 50px;
+	font-size: 14px;
+	color: #FFFFFF;
+	background: #31a5e7;
+	text-align: center;
+	border-radius: 2px;
+}
+
+.opration {
+	display: inline-block;
+	width: 48px;
+	color: #32a3e7;
+	cursor: pointer;
+	font-size: 14px;
+	text-align: center;
+}

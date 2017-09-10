@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ssm.farsh.dao.UserDao">
+    <select id="queryAllUsersByPage" resultType="User">
+        select * from user limit #{startPos},#{pageSize}
+    </select>
+    <select id="getUsersCount" resultType="long">
+    	select count(*) from user
+    </select>
+    <select id="queryAlluser" resultType="User">
+        select * from user
+    </select>
+    <select id="findByID" parameterType="User" resultType="User">
+    	SELECT * FROM USER WHERE Uid = #{uid}
+    </select>
+    <select id="getUserIdByUserName" resultType="java.lang.Integer" parameterType="java.lang.String">
+      	SELECT Uid FROM USER WHERE Account = #{name}
+    </select>
+    <select id="getUserByAccount" resultType="User">
+    	SELECT * FROM USER WHERE Account = #{account}
+    </select>
+    <select id="getUserByaccountandpwd" resultType="User">
+    	SELECT * FROM USER WHERE Account = #{account} and Pwd = #{pwd}
+    </select>
+    <insert id="saveUser" parameterType="User">
+    	INSERT INTO 
+    	user(Account,Pwd,sex,Age,UpicFilename,Umoney,name,birthday,phone,Email,Utype,Uauthority) 
+    	VALUES
+    	(#{account},#{pwd},#{sex},#{age},#{upicFilename},#{umoney},#{name},#{birthday},#{phone},#{email},#{uType},#{uauthority})
+    </insert>
+    <delete id="delete" parameterType="User">
+         delete from user where uid = #{uid}
+    </delete>
+    <update id="modify" parameterType="User">
+          UPDATE user 
+          SET Account =#{account},Pwd=#{pwd},
+              sex=#{sex},Age=#{age},UpicFilename=#{upicFilename},
+              Umoney=#{umoney},name=#{name},birthday=#{birthday},
+              phone=#{phone},Email=#{email} ,Utype=#{uType},Uauthority=#{uauthority}
+              WHERE Uid = #{uid}
+    </update>
+</mapper>

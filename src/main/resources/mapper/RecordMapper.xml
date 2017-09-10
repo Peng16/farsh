@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ssm.farsh.dao.RecordDao">
+	<insert id="saveRecord" parameterType="Record">
+	    	INSERT INTO 
+	    	record(pId,pNum,rpicture,rprice,pDiscount,pSumprice,uid,sid) 
+	    	VALUES
+	    	(#{pId},#{pNum},#{rPicture},#{rprice},#{pDiscount},#{pSumprice},#{uid},#{sid})
+	</insert>
+	 <select id="queryRecordByrid" parameterType="Record" resultType="Record">
+    	SELECT * FROM record WHERE reId = #{rid}
+    </select>
+     <select id="queryAllRecords" resultType="Record">
+    	SELECT * FROM record 
+    </select>
+    <select id="queryRecordByuid" parameterType="Record" resultType="Record">
+    	SELECT * FROM record WHERE uid = #{uid}
+    </select>
+     <select id="searchByUidAndSid" parameterType="Record" resultType="Record">
+    	SELECT * FROM record WHERE uid = #{uid} and sid = #{sid}
+    </select>
+     <delete id="deletebyrid" parameterType="Record">
+         delete from record WHERE reId = #{rid}
+    </delete>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ssm.farsh.dao.AddressDao">
+	<select id="queryAddressByUid" parameterType="Address" resultType="Address">
+		SELECT * FROM address WHERE Uid=#{uid}
+	</select>
+	<select id="queryAddressByAid" parameterType="Address" resultType="Address">
+		SELECT * FROM address WHERE Aid=#{aid}
+	</select>
+	<select id="queryAddressByUidAndAdefult" parameterType="Address" resultType="Address">
+		SELECT * FROM address WHERE Uid=#{uid} and Adefult =#{aDefult}
+	</select>
+	<select id="addAddress" resultType="Address">
+		INSERT INTO 
+		address(Aname,Aphone,Aprovince,Acity,ADetailed,Uid,Adefult)
+		VALUES
+		(#{aName},#{aPhone},#{aProvince},#{aCity},#{aDetailed},#{uid},#{aDefult})
+	</select>
+	
+	<select id="modifyAddress" resultType="Address">
+		UPDATE address 
+		SET Aname=#{aName},Aphone=#{aPhone},Aprovince=#{aProvince},Acity=#{aCity},ADetailed=#{aDetailed},Uid=#{uid},Adefult=#{aDefult} WHERE Aid=#{aId} 
+	</select>
+	
+	<select id="deleteAddress" resultType="Address">
+		delete from address where Aid=#{aId}
+	</select>
+	
+</mapper>
